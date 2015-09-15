@@ -106,7 +106,7 @@
             scope.$watch('firstDate', function () {
               if(scope.firstDate !== null){
                 $directive.focusedModel = 'firstDateElem';
-               scope.$select(scope.firstDate,null,true);
+               scope.$select(scope.firstDate,scope.dateFormat,true);
                buildView();
              }else{
                 checkValidity();
@@ -118,7 +118,7 @@
             scope.$watch('lastDate', function () {
             if(scope.lastDate !== null){
               $directive.focusedModel = 'lastDateElem';
-              scope.$select(scope.lastDate,null,true);
+              scope.$select(scope.lastDate,scope.dateFormat,true);
               buildView();
             }else{
               checkValidity();
